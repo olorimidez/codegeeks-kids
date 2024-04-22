@@ -1,0 +1,10 @@
+.hero{
+    position: relative;
+}
+.hero-content{
+    padding: 48px 0;
+}
+.bg-img{
+    object-fit: cover;
+    z-index:  -1;
+}

@@ -1,0 +1,19 @@
+.bg_footer{
+    background-color: #0f0013;
+}
+.text_a{
+    color: white;
+    font-size: .8rem;
+}
+.footer_top{
+    z-index: 999;
+}
+.socialIcons{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
