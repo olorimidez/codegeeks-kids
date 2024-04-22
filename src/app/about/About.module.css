@@ -1,0 +1,32 @@
+.img{
+    position: relative;
+}
+.img_abt{
+    object-fit: cover;
+    z-index: -1;  /* Ensures the image appears behind other elements */
+}
+.socialIcons{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.purple{
+    background: #B61CB9;
+}
+.fs{
+    font-size: .6rem;
+}
+.toys{
+  margin: 0 5rem;
+}
+.main{
+    position: relative;
+}
+.bg_3{
+    object-fit: cover;
+    z-index: -1;
+}

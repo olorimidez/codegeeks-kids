@@ -1,0 +1,8 @@
+
+.bg{
+    position: relative;
+}
+.bg_register{
+    z-index: -1;
+    object-fit: cover;
+}

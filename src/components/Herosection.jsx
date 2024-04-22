@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Kids from './Kids';
 import Learn from './Learn';
 import Roadmap from './Roadmap';
-// import styles from "../app/hero.module.css"
 const Herosection = () => {
   return (
 <>

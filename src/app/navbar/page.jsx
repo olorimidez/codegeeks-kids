@@ -26,17 +26,17 @@ function Header() {
         >
           <Nav className="ml-auto px-3">
             <Nav.Link className="text-white fw-bold" href="/">
-              HOME
+              Home
             </Nav.Link>
             <Nav.Link className="text-danger fw-bold" href="/about">
-              ABOUT
+              About
             </Nav.Link>
     
-            <Nav.Link className="text-success fw-bold" href="/blog">
-              BLOG
+            <Nav.Link className="text-success fw-bold" href="/register">
+              Register
             </Nav.Link>
             <Nav.Link className="text-warning fw-bold" href="/contact">
-              CONTACT
+              Contact
             </Nav.Link>
           </Nav>
 
