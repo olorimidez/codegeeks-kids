@@ -9,7 +9,6 @@ import toys from '../../../public/assets/aboutpage-section2-img1.png'
 import SummerKids from '@/components/SummerKids'
 import bg_2 from '../../../public/assets/bg-1.png'
 import toy_2 from '../../../public/assets/aboutpage-section2-img2.png'
-// kids-file/public/assets/aboutpage-section2-img2.png
 
 const About = () => {
   return (
