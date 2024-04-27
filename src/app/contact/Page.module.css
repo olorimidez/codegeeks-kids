@@ -6,6 +6,9 @@
         object-fit: cover;
         z-index: -1;
 }
+.bg_color{
+    background: #0f0013;
+}
 .left{
     background: #0f0013;
     clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
