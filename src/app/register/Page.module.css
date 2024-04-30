@@ -6,3 +6,38 @@
     z-index: -1;
     object-fit: cover;
 }
+.bg_main{
+    background: #190a20;
+}
+.bg_form{
+    background: #25012f;
+    padding: 2rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+.dashed{
+    border: 2px dashed white;
+}
+.dashed::placeholder{
+    color: white;
+}
+.dashed option{
+    background-color: white;
+    color: black !important;
+}
+.dashed option:checked{
+    color: grey;
+}
+.butt_sub{
+    background-color: #be0fdc;
+    padding: .5rem 3rem;
+    border: 2px solid #be0fdc;
+    border-radius: 0.7rem;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+}
+.butt_sub:hover{
+    background-color: #be0fdc;
+    border: 2px solid #be0fdc;
+}
