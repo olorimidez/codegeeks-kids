@@ -12,20 +12,16 @@ const Register = () => {
     name: '',
     email: '',
     phone: '',
-    password: '',
   };
   
-  
-  const validatePassword = /^[a-zA-Z0-9_@]+$/;
   const validatePhone = /^[\+][0-9]{5,10}$/;
   const validationSchema = yup.object({
     name: yup
       .string()
-      .required('Enter your name')
-      .max(10, 'must not be more than 10 characters long'),
+      .required('Enter your Fullname')
+      .max(50, 'must not be more than 10 characters long'),
     email: yup.string().required('Email is required').email('Enter a valid email'),
-    phone: yup.string().matches(validatePhone, 'Incorreect phone number.'),
-    password: yup.string().matches(validatePassword, 'Incorreect password combination.'),
+    phone: yup.string().matches(validatePhone, 'Incorrect phone number.').required('Phone Number is required'),
   });
   
   const handleSubmission = (values) => {
@@ -65,33 +61,46 @@ const Register = () => {
             onSubmit={handleSubmission}
           > 
             {({ values, handleBlur, handleChange, handleSubmit,  }) => (
-                        <form onSubmit={handleSubmission}>
+                        <form onSubmit={handleSubmit}>
                           <div className="row">
                             <div className="col-sm-12 col-md-6 col-xl-6">
                             <div className="form-group">
                               <label for="fullname" className="text-white mt-4">FullName:</label>
                               <input type="text"
+                              name="name"
                               onBlur={handleBlur}
                               onChange={handleChange}
                               value={values.name}
                               className={`form-control bg-transparent ${styles.dashed}`} id="exampleFormControlInput1" placeholder="Enter your fullname"/>
                            </div>
-                           <ErrorMessage name="fullname" component="span" className="error text-danger" />
+                           <ErrorMessage name="name" component="span" className="error text-danger" />
                             </div>
                             <div className="col-sm-12 col-md-6 col-xl-6">
                                 <div className="form-group">
                                   <label for="email" className="text-white mt-4">Email:</label>
-                                  <input type="email" className={`form-control bg-transparent ${styles.dashed}`} id="exampleFormControlInput1" placeholder="name@example.com"/> 
+                                  <input type="email"
+                                  name="email"
+                                   onBlur={handleBlur}
+                                   onChange={handleChange}
+                                   value={values.email}
+                                   className={`form-control bg-transparent ${styles.dashed}`} id="exampleFormControlInput1" placeholder="name@example.com"/> 
                               </div>
+                              <ErrorMessage name="email" component="span" className="error text-danger" />
                             </div>
                           </div>
                           <div className="row">
                           
                             <div className="col-sm-12 col-md-6 col-xl-6">
                               <div className="form-group">
-                                <label for="number" className="text-white mt-4">PhoneNumber:</label>
-                                <input type="tel" className={`form-control bg-transparent ${styles.dashed}`} id="exampleFormControlInput1" placeholder="+234 0900 333 4444"/> 
+                                <label for="number" className="text-white mt-4">Phone Number:</label>
+                                <input type="tel" 
+                                 name="phone"
+                                 onBlur={handleBlur}
+                                 onChange={handleChange}
+                                 value={values.phone}
+                                 className={`form-control bg-transparent ${styles.dashed}`} id="exampleFormControlInput1" placeholder="+234 0900 333 4444"/> 
                               </div>
+                              <ErrorMessage name="phone" component="span" className="error text-danger" />
                             </div>
                             <div className="col-sm-12 col-md-6 col-xl-6">
                                 <div className="form-group">
@@ -131,7 +140,7 @@ const Register = () => {
                           <div className="row">
                             <div className="form-group">
                                 <label for="textarea" className='text-white mt-4'>Leave a comment here</label>
-                                <textarea name="textarea" className={`bg-transparent ${styles.dashed}`} placeholder='Optional...' cols="55" rows="5"></textarea>  
+                                <textarea name="textarea" className={`bg-transparent text-white  ${styles.dashed}`} placeholder='Optional...' cols="55" rows="5"></textarea>  
                             </div>
                           </div>
 

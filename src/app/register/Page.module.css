@@ -19,14 +19,19 @@
     border: 2px dashed white;
 }
 .dashed::placeholder{
-    color: white;
+    color: rgb(123, 122, 122);
+    font-size: .8rem;
 }
 .dashed option{
     background-color: white;
-    color: black !important;
+    color: rgb(123, 122, 122) !important;
+    font-size: .8rem !important;
 }
-.dashed option:checked{
-    color: grey;
+.dashed select{
+    font-size: .8rem;
+}
+.dashed:focus{
+    border: none;
 }
 .butt_sub{
     background-color: #be0fdc;
